@@ -12,10 +12,10 @@ const forecast = (latitude, longitude, callback) => {
       const description = body.current["weather_descriptions"][0];
       const temperature = body.current.temperature;
       const feelslike = body.current.feelslike;
-      const time = body.current.observation_time;
+      const windspeed = body.current.wind_speed;
       callback(
         undefined,
-        `${description}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out.The current time in ${time}`
+        `${description}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out.The wind speed is ${windspeed} knots`
       );
     }
   });
